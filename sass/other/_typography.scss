@@ -1,0 +1,26 @@
+.heading-prim{
+    font-size: 5rem;
+    font-weight: 500;
+    background-image: linear-gradient(to right bottom, $col-prim-dark, $col-black);
+    -webkit-background-clip: text;
+    color: transparent;
+    @media screen and (max-width: 48em){
+        font-size: 4.25rem;
+    }
+    @media screen and (max-width: 36em){
+        font-size: 3.5rem;
+    }
+}
+.heading-sec{
+    font-size: 5rem;
+    font-weight: 500;
+    background-image: linear-gradient(to right bottom, $col-prim, $col-prim);
+    -webkit-background-clip: text;
+    color: transparent;
+    @media screen and (max-width: 48em){
+        font-size: 4.25rem;
+    }
+    @media screen and (max-width: 36em){
+        font-size: 3.5rem;
+    }
+}

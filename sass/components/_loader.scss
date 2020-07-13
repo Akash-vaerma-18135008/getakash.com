@@ -1,0 +1,52 @@
+//  mixin for child elments
+@mixin child($n) {
+  @for $i from 1 to $n {
+    span:nth-child(#{$i}) {
+      animation-delay: #{($i + 1) * 0.1}s;
+      // height:#{$i}rem
+    }
+  }
+}
+
+
+//  actual animation
+$max-height:3rem;
+$min-height:1rem;
+$bar-width:.2rem;
+
+.msg{
+  color:rgba(0,0,0,.2);
+}
+
+.loader{
+  display:flex;
+  height:$max-height;
+  span{
+    display:block;
+    background:black;
+    width:$bar-width;
+    margin:auto .25rem;
+    animation:loading 1s infinite;
+  }
+    @include child(12);
+
+}
+
+@keyframes loading{
+  0%{
+    height:$min-height;
+  }
+  30%{
+    height:$min-height;
+  }
+  50%{
+    height:$max-height;
+  }
+  70%{
+    height:$min-height;
+  }
+  100%{
+    height:$min-height;
+  }
+  
+}

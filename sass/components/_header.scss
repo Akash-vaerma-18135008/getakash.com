@@ -1,0 +1,68 @@
+#header{
+    // max-width: 100vw;
+    height: 92vh;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10rem;
+
+    @media screen and (max-width: 48em){
+        padding-left: 5rem;
+    }
+    @media screen and (max-width: 36em){
+        padding-left: 2rem;
+    }
+
+    &-heading{
+        color: $col-white;
+        font-size: 4rem;
+        font-weight: 600;
+        @media screen and (max-width: 48em){
+            font-size: 3.5rem;
+        }
+        @media screen and (max-width: 36em){
+            font-size: 2.5rem;
+        }
+        span{
+            color: $col-prim;
+            font-size: 4.25rem;
+            @media screen and (max-width: 48em){
+                font-size: 3.75rem;
+            }
+            @media screen and (max-width: 36em){
+                font-size: 3.75rem;
+            }
+            @media screen and (max-width: 20em){
+                font-size: 3.25rem;
+            }
+            font-weight: 800;
+        }
+    }
+    .btn{
+        display: flex;
+        align-items: center;
+        &-outline-primary{
+            border: 2px solid $col-white;
+            font-size: 2.5rem;
+            color: $col-white;
+            font-weight: 500;
+            transition: all .2s;
+            span{
+                transition: all .2s;
+            }
+            i{
+                font-weight: 800;
+            }
+            &:hover{
+                background-color: $col-prim;
+                border: 2px solid $col-prim;
+            }
+            &:hover span{
+                transform: rotateZ(90deg);
+            }
+        }
+    }
+}

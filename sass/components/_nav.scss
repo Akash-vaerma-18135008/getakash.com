@@ -1,0 +1,83 @@
+
+.navbar{
+    border-bottom: 3px solid $col-prim; 
+    height: 8vh;
+    background-color: $col-nav-bg;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    padding: 0!important;
+    z-index: 2000;
+    &-resume{
+        font-size: 2.75rem;
+        text-decoration: none;
+        color: $col-white;
+        margin-right: 2.5rem;
+        transition: all .2s;
+
+        &:hover{
+            color: $col-prim;
+            // transform: scale(1.05);
+        }
+    }
+    &-toggler{
+        position: relative;
+        height: 100%;
+        width: 5rem;
+        display: flex;
+        align-items: center;
+        padding-left: 3rem;
+        &:focus{
+            outline: none;
+        }
+        div{
+            position: relative;
+            &,
+            &:before,
+            &:after{
+                content:"";
+                border: 2px solid $col-prim;
+                position: absolute;
+                width: 3rem;
+                transition: all .2s;
+            }
+            &:before{
+                left: -2px;
+                top: -10px;
+            }
+            &:after{
+                left: -2px;
+                top: 6px;
+            }
+        }
+        &:hover div{
+                border: 2px solid $col-white;
+            }
+        &:hover div:before{
+                border: 2px solid $col-white;
+            }
+        &:hover div:after{
+                border: 2px solid $col-white;
+            }
+    }
+    .navbar-nav{
+            .nav-link{
+                font-size: 2rem;
+                color: $col-prim;
+                font-weight: 500;
+                margin-left: 3rem;
+                // transition: all .2s;
+                &:hover{
+                    color: $col-white ;
+                }
+            }
+    }
+    .navbar-collapse{
+        background-color: $col-nav-bg-light; 
+    }
+}
+.mynav-active{
+    color: $col-white !important;
+}
+
+

@@ -1,0 +1,48 @@
+.footer{
+    padding: 2rem;
+    background-color: $col-black;
+    border: none;
+    position: relative;
+
+    .fa-arrow-up{
+        color: $col-white;
+        position: absolute;
+        top: -2rem;
+        left: 50%;
+        padding: 1rem;
+        background-color: $col-prim;
+        font-size: 2.25rem;
+        font-weight: 600;
+        transform: translateX(-35%);
+    }
+    &--row{
+        display: flex;
+        justify-content: center;
+        padding: 2rem;
+        &-main{
+            a{
+                text-decoration: none;
+                margin-left: 3rem;
+                margin-top: 2rem;
+                @media screen and (max-width: 36em){
+                        margin-left: 2rem;
+                    }
+                .fab, .fas{
+                    font-size: 4rem;
+                    color: $col-white;
+                    @media screen and (max-width: 48em){
+                        font-size: 3.5rem;
+                    }
+                    @media screen and (max-width: 36em){
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+        &-copyright{
+            color: $col-white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,147 @@
+.card{
+    margin-bottom: 3.5rem;
+    // box-shadow: 0.5rem 0.5rem 2rem rgba($col-black,0.7);
+    // border: 3px solid $col-prim;
+    padding-bottom: 0;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    border: none;
+    position: relative;
+    background-color: $col-grey !important;
+    &-main{
+        // z-index: 100;
+        overflow: hidden;
+        transition: all 0.4s ease-out;
+        box-shadow: 2px 4px 1rem rgba($col-black,0.7);
+    }
+    img{
+        overflow: hidden;
+    }
+
+    &-body{
+        padding: 1rem 2rem;
+        font-size: 3rem;
+        color: white;
+        background-color: $col-sec;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        p{
+
+        }
+        span{
+            // display: none;
+            margin-left: auto;
+            animation: moveFromSideBottom 1.5s infinite ease-out;
+        }
+    }
+    &-info{
+        box-sizing: initial;
+        background-color: $col-sec-light;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        transform: rotateY(180deg);
+        transition: all 0.4s ease-out;
+        opacity: 0;
+        visibility: hidden;
+        color: $col-white;
+        p{
+            font-size: 2.25rem;
+            padding: 1rem 0;
+            width: 100%;
+            background-color: $col-sec;
+            text-align: center;
+            color: white;
+        }
+        h2{
+            font-size:1.5rem;
+            font-weight: 600;
+            color: $col-prim;
+            border-bottom: 2px solid $col-prim;
+        }
+        ul{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-gap: 2rem;
+            justify-content: start;
+            font-size: 2rem;
+            color: $col-prim;
+            font-weight: 600;
+            div:nth-of-type(1){
+                margin-right: 4rem;
+            }
+            @media screen and (max-width: 23em){
+                font-size: 1.25rem;
+            }
+        }
+        .div-a{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            background-color: $col-sec;
+            a:link,
+            a:visited{
+                cursor: pointer;
+                display: inline-block;
+                text-decoration: none;
+                font-size: 1.75rem;
+                font-weight: 600;
+                color: $col-white;
+                padding: 1.55rem;
+                width: 50%;
+                transition: all .2s;
+                text-align: center;
+                @media screen and (max-width: 23em){
+                    font-size: 1.5rem;
+                }
+            }
+            a:hover{
+                transform: scale(1.1);
+                color: $col-prim;
+            }
+        }
+
+    }
+    &:hover &-info{
+        transform: rotateY(0deg);
+        opacity: 1;
+        visibility: visible;
+    }
+    &:hover &-main{
+        transform: rotateY(-180deg);
+    }
+   
+}
+
+@keyframes moveFromSideBottom{
+    0%{
+        opacity:0;
+        transform: translateY(3rem);
+        transform: translateX(-3rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+        transform: translateX(0);
+    }
+}
+@keyframes blinkText{
+    0%{
+        letter-spacing: inherit;
+    }
+    50%{
+        letter-spacing: 2.5rem;
+    }
+    100%{
+        letter-spacing: inherit;
+    }
+}

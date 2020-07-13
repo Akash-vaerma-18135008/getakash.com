@@ -1,0 +1,37 @@
+.projpage{
+    margin: 9rem auto 12rem auto;
+    &-c1{
+        h1{
+            text-align: start;
+            margin-bottom: 6rem;
+        }
+        .row{
+            .card{
+                &-info{
+                    .p{
+                        backface-visibility: hidden;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                    }
+                    .ul{
+                        backface-visibility: hidden;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+        h1{
+            span{
+                font-size: 4rem;
+            }
+        }
+    }
+    &-frontend{
+        margin-bottom: 5rem;
+    }
+    &-react{
+        margin-bottom: 5rem;
+    }
+    &-fullstack{
+    }
+}

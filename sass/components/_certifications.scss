@@ -1,0 +1,92 @@
+.certifications{
+    margin-top: 10rem;
+    text-align: center;
+    h1{
+        margin-bottom: 10rem;
+        span{
+            border-bottom: 3px solid $col-prim-dark;
+            padding-bottom: 1rem;
+        }
+    }
+    &-heading{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    .container{
+        .row{
+            .col-lg-3{
+                .card-img-top{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}
+.card{
+    background-color: transparent !important;
+    position: relative;
+    button{
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        background-color: $col-prim;
+        padding: 2rem;
+        border-radius: 50%;
+        color: white;
+        font-weight: 600;
+            transition: all .7s;
+            outline: none;
+            border: none;
+            box-shadow: 1px 2px 5px $col-black;
+        @media screen and (max-width: 48em){
+            opacity: 1;
+            position: absolute;
+            left: 92%;
+            top: 90%;
+            padding: 1.75rem;;
+        }
+        @media screen and (max-width: 36em){
+            left: 90%;
+        }
+        &:hover{
+            background-color: $col-prim;
+        }
+        &:focus{
+            background-color: $col-prim;
+        }
+    }
+    .btn-coursera{
+         @media screen and (max-width: 48em){
+            left: 94%;
+            top: 95%;
+        }
+         @media screen and (max-width: 36em){
+            left: 93%;
+        }
+        @media screen and (max-width: 22em){
+            left: 91%;
+        }
+    }
+    img{
+        transition: all .7s;
+    }
+    &:hover button{
+        opacity: 1;
+    }
+    &:hover img{
+        opacity: 0;
+    }
+}
+.btn-danger{
+    font-size: 1.75rem;
+}
+.btn-info{
+    font-size: 1.75rem;
+}
+.modal-title{
+    font-size: 1.75rem;
+    font-weight: 600;
+}
